@@ -37,6 +37,7 @@ pub enum WchLinkVariant {
 impl WchLinkVariant {
     pub fn try_from_u8(value: u8) -> Result<Self> {
         match value {
+            0 => Ok(Self::Ch549),
             1 => Ok(Self::Ch549),
             2 | 0x12 => Ok(Self::ECh32v305),
             3 => Ok(Self::SCh32v203),
